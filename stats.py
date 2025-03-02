@@ -10,3 +10,15 @@ def get_char_count(text):
         else:
             char_count[char] = 1
     return char_count
+
+def sort_on(dict):
+    return dict["num"]
+
+def sort_dictionaries(dict):
+    list = []
+    for key in dict:
+        list.append({"name": key, "num": dict[key]})
+
+    list.sort(reverse=True, key=sort_on)
+    return list
+    
